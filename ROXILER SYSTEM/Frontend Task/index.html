@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Transactions Dashboard</h1>
+        <div class="controls">
+            <label for="month">Select Month:</label>
+            <select id="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March" selected>March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <input type="text" id="search" placeholder="Search transactions">
+        </div>
+        
+        <div class="statistics">
+            <div>Total Sales: <span id="total-sales"></span></div>
+            <div>Sold Items: <span id="sold-items"></span></div>
+            <div>Not Sold Items: <span id="not-sold-items"></span></div>
+        </div>
+
+        <table id="transactions-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Date of Sale</th>
+                    <th>Sold</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+        <div class="pagination">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+
+        <canvas id="bar-chart"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
